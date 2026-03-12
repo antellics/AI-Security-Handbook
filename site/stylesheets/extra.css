@@ -1,0 +1,54 @@
+/* Wide tables: prevent overflow on large matrices */
+.md-typeset table:not([class]) {
+    font-size: 0.78rem;
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+}
+
+.md-typeset table:not([class]) th {
+    min-width: 8em;
+}
+
+/* Code blocks */
+.md-typeset pre > code {
+    font-size: 0.82rem;
+}
+
+/* PDF-specific overrides (picked up by mkdocs-with-pdf) */
+@media print {
+    h1 {
+        page-break-before: always;
+        margin-top: 2em;
+    }
+
+    h1:first-of-type {
+        page-break-before: avoid;
+    }
+
+    table {
+        font-size: 8pt;
+        width: 100%;
+        white-space: normal;
+    }
+
+    pre {
+        font-size: 8pt;
+        white-space: pre-wrap;
+        word-wrap: break-word;
+    }
+
+    .md-typeset pre > code {
+        font-size: 8pt;
+    }
+
+    /* Prevent code blocks from being split across pages */
+    pre, code, .highlight {
+        page-break-inside: avoid;
+    }
+
+    /* Keep headings with their content */
+    h2, h3, h4 {
+        page-break-after: avoid;
+    }
+}

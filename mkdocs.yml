@@ -1,0 +1,119 @@
+site_name: GenAI Offensive Security Handbook
+site_description: Comprehensive Security Testing Standard and Pentesting Field Manual for AI-Enabled Applications
+site_author: ""
+
+theme:
+  name: material
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: deep purple
+      accent: indigo
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+  font:
+    text: Inter
+    code: Fira Code
+  features:
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.sections
+    - navigation.expand
+    - navigation.indexes
+    - toc.follow
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+
+markdown_extensions:
+  - tables
+  - toc:
+      permalink: true
+      toc_depth: 3
+  - pymdownx.highlight:
+      anchor_linenums: true
+      use_pygments: true
+      auto_title: true
+  - pymdownx.superfences
+  - pymdownx.inlinehilite
+  - pymdownx.tasklist:
+      custom_checkbox: true
+  - admonition
+  - pymdownx.details
+  - def_list
+  - attr_list
+  - md_in_html
+
+plugins:
+  - search
+  - with-pdf:
+      author: ""
+      copyright: ""
+      cover: true
+      cover_title: GenAI Offensive Security Handbook
+      cover_subtitle: Comprehensive Security Testing Standard and Pentesting Field Manual for AI-Enabled Applications
+      toc_title: Table of Contents
+      heading_shift: false
+      toc_level: 3
+      ordered_chapter_level: 2
+      enabled_if_env: ENABLE_PDF_EXPORT
+      output_path: GenAI-Offensive-Security-Handbook.pdf
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - I. Foundations:
+    - 1. Introduction: part-1-foundations/01-introduction.md
+    - 2. Scope and Objectives: part-1-foundations/02-scope-and-objectives.md
+    - 3. Terminology: part-1-foundations/03-terminology.md
+    - 4. System Architecture: part-1-foundations/04-system-architecture.md
+    - 5. Attack Surface Model: part-1-foundations/05-attack-surface-model.md
+    - 6. Mapping to AppSec: part-1-foundations/06-mapping-to-appsec.md
+  - II. Methodology:
+    - 7. Enumeration: part-2-methodology/07-enumeration.md
+    - 8. Threat Modeling: part-2-methodology/08-threat-modeling.md
+    - 9. Roles: part-2-methodology/09-roles-and-responsibilities.md
+    - 10. Testing Phases: part-2-methodology/10-testing-methodology.md
+  - III. Attack Classes:
+    - 11. Prompt Injection: part-3-attack-classes/11-prompt-injection.md
+    - 12. Indirect Injection: part-3-attack-classes/12-indirect-prompt-injection.md
+    - 13. Context Leakage: part-3-attack-classes/13-context-isolation.md
+    - 14. Data Exfiltration: part-3-attack-classes/14-data-exfiltration.md
+    - 15. Tool Abuse: part-3-attack-classes/15-tool-invocation-abuse.md
+    - 16. RAG Poisoning: part-3-attack-classes/16-rag-poisoning.md
+    - 17. Output Injection: part-3-attack-classes/17-output-injection.md
+    - 18. Jailbreak: part-3-attack-classes/18-jailbreak.md
+    - 19. Resource Abuse: part-3-attack-classes/19-resource-abuse.md
+  - IV. Advanced:
+    - 20. Agent Exploitation: part-4-advanced-exploitation/20-agent-exploitation.md
+    - 21. Vector DB Attacks: part-4-advanced-exploitation/21-vector-database-attacks.md
+    - 22. Model Attacks: part-4-advanced-exploitation/22-advanced-model-attacks.md
+  - V. Matrix:
+    - 23. Exploitation Matrix: part-5-exploitation-matrix/23-exploitation-matrix.md
+  - VI. Resources:
+    - 24. Payload Library: part-6-operational-resources/24-payload-library.md
+    - 25. Automation: part-6-operational-resources/25-automation-framework.md
+    - 26. Red Team Playbooks: part-6-operational-resources/26-red-team-playbooks.md
+    - 27. Case Studies: part-6-operational-resources/27-case-studies.md
+  - VII. Defense:
+    - 28. Defensive Review: part-7-defense-and-reporting/28-defensive-review.md
+    - 29. Risk and Reporting: part-7-defense-and-reporting/29-risk-and-reporting.md
+    - 30. Checklists: part-7-defense-and-reporting/30-checklists.md
+  - Appendices:
+    - A. Attack Trees: appendices/a-attack-trees.md
+    - B. Threat Models: appendices/b-threat-modeling-templates.md
+    - C. MITRE ATLAS: appendices/c-mitre-atlas.md
+    - D. Alignment: appendices/d-framework-alignment.md
+    - E. Future Threats: appendices/e-future-attacks.md
