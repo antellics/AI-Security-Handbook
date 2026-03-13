@@ -9,6 +9,8 @@ Prompt Builder         → Prompt injection, instruction override
   ↓
 RAG Retrieval          → Knowledge poisoning, retrieval manipulation
   ↓
+MCP Server Layer       → Tool poisoning, rug pulls, shadowing, supply chain
+  ↓
 LLM Model              → Guardrail bypass, jailbreak
   ↓
 Tool Invocation        → Unauthorized execution, parameter manipulation
@@ -25,6 +27,8 @@ Output Rendering       → XSS, markdown injection, phishing
 | User Input | Prompt injection |
 | Prompt Builder | Instruction override |
 | RAG Retrieval | Knowledge poisoning |
+| MCP Servers | Tool poisoning, rug pulls, cross-server attacks |
+| MCP Transport | Credential interception, unauthorized server access |
 | LLM | Guardrail bypass |
 | Tools | Unauthorized execution |
 | Rendering | Output injection |

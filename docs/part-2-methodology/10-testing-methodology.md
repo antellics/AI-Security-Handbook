@@ -51,6 +51,18 @@ Determine whether the model can call tools such as:
 * Email systems
 * Internal APIs
 * Cloud resources
+* MCP server-provided tools
+
+### Step 5a — Enumerate MCP Servers
+
+If MCP is present, identify:
+
+* Connected MCP servers and their provenance (first-party, third-party, community)
+* Tools, resources, and prompt templates exposed by each server
+* Transport type for each server (local stdio vs. remote HTTP/SSE)
+* Authentication mechanisms and credential storage
+* MCP configuration file locations and contents
+* Version pinning and update policies for MCP server packages
 
 ## Phase 2 — Trust Boundary Analysis
 
@@ -63,6 +75,9 @@ Locate entry points where untrusted input enters the system:
 * External content sources
 * API endpoints
 * Third-party integrations
+* MCP server connections (each server is a trust boundary)
+* MCP tool descriptions injected into prompt context
+* MCP resources providing external data to the model
 
 ### Step 7 — Evaluate Authorization Controls
 
@@ -73,6 +88,9 @@ Verify enforcement of:
 * Document permissions
 * Tool authorization
 * Session boundaries
+* MCP server permission scoping
+* MCP tool invocation authorization per user role
+* MCP credential isolation between servers
 
 ### Step 8 — Evaluate Prompt Security
 
@@ -95,7 +113,7 @@ Attempt extraction of system prompts, secrets, internal documents, and other use
 
 ### Step 11 — Tool Abuse
 
-Manipulate model tool calls to perform unauthorized actions.
+Manipulate model tool calls to perform unauthorized actions. For MCP-enabled systems, test tool poisoning, rug pulls, shadowing, cross-server influence, and credential exposure.
 
 ### Step 12 — Output Injection
 

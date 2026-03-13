@@ -1693,6 +1693,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#264-mcp-tool-poisoning-campaign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26.4 MCP Tool Poisoning Campaign
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#265-mcp-rug-pull-campaign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26.5 MCP Rug Pull Campaign
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#266-mcp-cross-server-lateral-movement-campaign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26.6 MCP Cross-Server Lateral Movement Campaign
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2162,6 +2195,39 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#264-mcp-tool-poisoning-campaign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26.4 MCP Tool Poisoning Campaign
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#265-mcp-rug-pull-campaign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26.5 MCP Rug Pull Campaign
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#266-mcp-cross-server-lateral-movement-campaign" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        26.6 MCP Cross-Server Lateral Movement Campaign
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2212,6 +2278,40 @@
 <li><strong>Tool Invocation:</strong> Agent executes unauthorized tool calls under attacker influence</li>
 <li><strong>Data Exfiltration:</strong> Agent retrieves and returns sensitive data</li>
 <li><strong>Persistence:</strong> Attempt to plant instructions in agent memory for future sessions</li>
+</ol>
+<h2 id="264-mcp-tool-poisoning-campaign">26.4 MCP Tool Poisoning Campaign<a class="headerlink" href="#264-mcp-tool-poisoning-campaign" title="Permanent link">&para;</a></h2>
+<p><strong>Objective:</strong> Compromise an MCP-enabled application through a malicious MCP server to exfiltrate sensitive data.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Reconnaissance:</strong> Identify target application's MCP integration (IDE, chat client, agent platform)</li>
+<li><strong>Server Preparation:</strong> Create a malicious MCP server package with benign-appearing tools whose descriptions contain hidden adversarial instructions</li>
+<li><strong>Distribution:</strong> Publish the MCP server to a package registry (npm, PyPI) with a plausible name and description, or distribute via social engineering (blog post, tutorial, forum recommendation)</li>
+<li><strong>Installation:</strong> Target user installs and connects the MCP server, approving its listed tools</li>
+<li><strong>Tool Poisoning Activation:</strong> Hidden instructions in tool descriptions manipulate the LLM to exfiltrate data through other connected MCP servers or include sensitive context in tool call parameters</li>
+<li><strong>Cross-Server Pivot:</strong> Leverage tool descriptions that instruct the model to invoke filesystem, database, or network tools from other connected servers</li>
+<li><strong>Data Exfiltration:</strong> Sensitive data (SSH keys, environment variables, source code, credentials) is transmitted through the malicious server's tool invocation parameters or a controlled external endpoint</li>
+<li><strong>Persistence:</strong> Optionally, poison MCP resources or prompt templates that persist beyond the current session</li>
+</ol>
+<h2 id="265-mcp-rug-pull-campaign">26.5 MCP Rug Pull Campaign<a class="headerlink" href="#265-mcp-rug-pull-campaign" title="Permanent link">&para;</a></h2>
+<p><strong>Objective:</strong> Establish trust with a legitimate-appearing MCP server, then modify behavior to compromise the application.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Trust Building:</strong> Publish a genuinely useful MCP server with clean tool descriptions and build user adoption</li>
+<li><strong>Reputation Establishment:</strong> Accumulate downloads, positive reviews, and integrations</li>
+<li><strong>Rug Pull:</strong> Push an update that modifies tool descriptions to include adversarial instructions, or change server-side execution logic to exfiltrate tool parameters</li>
+<li><strong>Exploitation:</strong> Users who auto-update or reinstall receive the compromised version</li>
+<li><strong>Lateral Impact:</strong> Compromised tool descriptions influence model behavior across all users of the server</li>
+</ol>
+<h2 id="266-mcp-cross-server-lateral-movement-campaign">26.6 MCP Cross-Server Lateral Movement Campaign<a class="headerlink" href="#266-mcp-cross-server-lateral-movement-campaign" title="Permanent link">&para;</a></h2>
+<p><strong>Objective:</strong> Use a low-privilege MCP server to escalate access through other connected servers.</p>
+<p><strong>Steps:</strong></p>
+<ol>
+<li><strong>Initial Access:</strong> Gain control of a single MCP server connection (via tool poisoning or supply chain)</li>
+<li><strong>Server Enumeration:</strong> Use tool description directives to instruct the model to list all connected MCP servers and their tools</li>
+<li><strong>Capability Mapping:</strong> Identify high-value tools on other servers (filesystem access, database queries, email sending, cloud APIs)</li>
+<li><strong>Cross-Server Exploitation:</strong> Craft tool description directives that instruct the model to invoke high-value tools on other servers with attacker-controlled parameters</li>
+<li><strong>Data Collection:</strong> Aggregate sensitive data retrieved from multiple servers</li>
+<li><strong>Exfiltration:</strong> Route collected data through a server with external network access</li>
 </ol>
 <hr />
 

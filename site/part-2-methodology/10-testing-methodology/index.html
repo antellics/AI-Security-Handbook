@@ -993,6 +993,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#step-5a-enumerate-mcp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5a — Enumerate MCP Servers
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2396,6 +2407,17 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#step-5a-enumerate-mcp-servers" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Step 5a — Enumerate MCP Servers
+      
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -2621,6 +2643,17 @@
 <li>Email systems</li>
 <li>Internal APIs</li>
 <li>Cloud resources</li>
+<li>MCP server-provided tools</li>
+</ul>
+<h3 id="step-5a-enumerate-mcp-servers">Step 5a — Enumerate MCP Servers<a class="headerlink" href="#step-5a-enumerate-mcp-servers" title="Permanent link">&para;</a></h3>
+<p>If MCP is present, identify:</p>
+<ul>
+<li>Connected MCP servers and their provenance (first-party, third-party, community)</li>
+<li>Tools, resources, and prompt templates exposed by each server</li>
+<li>Transport type for each server (local stdio vs. remote HTTP/SSE)</li>
+<li>Authentication mechanisms and credential storage</li>
+<li>MCP configuration file locations and contents</li>
+<li>Version pinning and update policies for MCP server packages</li>
 </ul>
 <h2 id="phase-2-trust-boundary-analysis">Phase 2 — Trust Boundary Analysis<a class="headerlink" href="#phase-2-trust-boundary-analysis" title="Permanent link">&para;</a></h2>
 <h3 id="step-6-identify-trust-boundaries">Step 6 — Identify Trust Boundaries<a class="headerlink" href="#step-6-identify-trust-boundaries" title="Permanent link">&para;</a></h3>
@@ -2631,6 +2664,9 @@
 <li>External content sources</li>
 <li>API endpoints</li>
 <li>Third-party integrations</li>
+<li>MCP server connections (each server is a trust boundary)</li>
+<li>MCP tool descriptions injected into prompt context</li>
+<li>MCP resources providing external data to the model</li>
 </ul>
 <h3 id="step-7-evaluate-authorization-controls">Step 7 — Evaluate Authorization Controls<a class="headerlink" href="#step-7-evaluate-authorization-controls" title="Permanent link">&para;</a></h3>
 <p>Verify enforcement of:</p>
@@ -2640,6 +2676,9 @@
 <li>Document permissions</li>
 <li>Tool authorization</li>
 <li>Session boundaries</li>
+<li>MCP server permission scoping</li>
+<li>MCP tool invocation authorization per user role</li>
+<li>MCP credential isolation between servers</li>
 </ul>
 <h3 id="step-8-evaluate-prompt-security">Step 8 — Evaluate Prompt Security<a class="headerlink" href="#step-8-evaluate-prompt-security" title="Permanent link">&para;</a></h3>
 <p>Review defenses such as:</p>
@@ -2655,7 +2694,7 @@
 <h3 id="step-10-data-exfiltration">Step 10 — Data Exfiltration<a class="headerlink" href="#step-10-data-exfiltration" title="Permanent link">&para;</a></h3>
 <p>Attempt extraction of system prompts, secrets, internal documents, and other user data.</p>
 <h3 id="step-11-tool-abuse">Step 11 — Tool Abuse<a class="headerlink" href="#step-11-tool-abuse" title="Permanent link">&para;</a></h3>
-<p>Manipulate model tool calls to perform unauthorized actions.</p>
+<p>Manipulate model tool calls to perform unauthorized actions. For MCP-enabled systems, test tool poisoning, rug pulls, shadowing, cross-server influence, and credential exposure.</p>
 <h3 id="step-12-output-injection">Step 12 — Output Injection<a class="headerlink" href="#step-12-output-injection" title="Permanent link">&para;</a></h3>
 <p>Test whether generated output can exploit downstream systems through HTML, markdown, or script injection.</p>
 <h2 id="phase-4-advanced-adversarial-testing">Phase 4 — Advanced Adversarial Testing<a class="headerlink" href="#phase-4-advanced-adversarial-testing" title="Permanent link">&para;</a></h2>

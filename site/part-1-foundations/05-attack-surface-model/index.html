@@ -2143,13 +2143,15 @@
 <a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>  ↓
 <a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>RAG Retrieval          → Knowledge poisoning, retrieval manipulation
 <a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>  ↓
-<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>LLM Model              → Guardrail bypass, jailbreak
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>MCP Server Layer       → Tool poisoning, rug pulls, shadowing, supply chain
 <a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>  ↓
-<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>Tool Invocation        → Unauthorized execution, parameter manipulation
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>LLM Model              → Guardrail bypass, jailbreak
 <a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>  ↓
-<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Application Logic      → Business logic abuse, workflow manipulation
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>Tool Invocation        → Unauthorized execution, parameter manipulation
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>  ↓
-<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Output Rendering       → XSS, markdown injection, phishing
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>Application Logic      → Business logic abuse, workflow manipulation
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>  ↓
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>Output Rendering       → XSS, markdown injection, phishing
 </code></pre></div>
 <h3 id="ai-threat-model-summary">AI Threat Model Summary<a class="headerlink" href="#ai-threat-model-summary" title="Permanent link">&para;</a></h3>
 <table>
@@ -2171,6 +2173,14 @@
 <tr>
 <td>RAG Retrieval</td>
 <td>Knowledge poisoning</td>
+</tr>
+<tr>
+<td>MCP Servers</td>
+<td>Tool poisoning, rug pulls, cross-server attacks</td>
+</tr>
+<tr>
+<td>MCP Transport</td>
+<td>Credential interception, unauthorized server access</td>
 </tr>
 <tr>
 <td>LLM</td>

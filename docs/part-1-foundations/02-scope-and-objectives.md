@@ -12,6 +12,8 @@ This standard applies to any application integrating AI models within its archit
 * AI agents capable of executing tools or APIs
 * AI-driven document analysis and report generation systems
 * Automated summarization features
+* MCP-enabled AI applications connecting to external tools and data sources via the Model Context Protocol
+* MCP servers exposing tools, resources, or prompts to AI clients
 
 ## 2.2 Out of Scope
 
@@ -36,5 +38,8 @@ Security testing should aim to identify:
 * Business logic manipulation through AI systems
 * Behavioral manipulation and guardrail bypass
 * Resource abuse and cost amplification vectors
+* MCP server trust boundary violations and tool poisoning
+* MCP cross-server attack propagation
+* MCP credential and transport security weaknesses
 
 ---

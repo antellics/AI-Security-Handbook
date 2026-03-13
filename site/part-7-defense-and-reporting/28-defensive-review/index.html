@@ -1841,10 +1841,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#286-context-and-memory-isolation" class="md-nav__link">
+  <a href="#286-mcp-security-controls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        28.6 Context and Memory Isolation
+        28.6 MCP Security Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="28.6 MCP Security Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mcp-server-trust-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Server Trust Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-tool-description-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Tool Description Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-transport-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Transport Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-credential-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Credential Protection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-permission-scoping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Permission Scoping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-cross-server-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Cross-Server Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-monitoring-and-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Monitoring and Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#287-context-and-memory-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        28.7 Context and Memory Isolation
       
     </span>
   </a>
@@ -2218,10 +2312,104 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#286-context-and-memory-isolation" class="md-nav__link">
+  <a href="#286-mcp-security-controls" class="md-nav__link">
     <span class="md-ellipsis">
       
-        28.6 Context and Memory Isolation
+        28.6 MCP Security Controls
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="28.6 MCP Security Controls">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mcp-server-trust-management" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Server Trust Management
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-tool-description-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Tool Description Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-transport-security" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Transport Security
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-credential-protection" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Credential Protection
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-permission-scoping" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Permission Scoping
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-cross-server-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Cross-Server Isolation
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mcp-monitoring-and-logging" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Monitoring and Logging
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#287-context-and-memory-isolation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        28.7 Context and Memory Isolation
       
     </span>
   </a>
@@ -2286,7 +2474,59 @@
 <li>Monitor token usage for anomalies</li>
 <li>Implement adaptive throttling for abusive patterns</li>
 </ul>
-<h2 id="286-context-and-memory-isolation">28.6 Context and Memory Isolation<a class="headerlink" href="#286-context-and-memory-isolation" title="Permanent link">&para;</a></h2>
+<h2 id="286-mcp-security-controls">28.6 MCP Security Controls<a class="headerlink" href="#286-mcp-security-controls" title="Permanent link">&para;</a></h2>
+<h3 id="mcp-server-trust-management">MCP Server Trust Management<a class="headerlink" href="#mcp-server-trust-management" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Maintain an allowlist of approved MCP servers with verified provenance</li>
+<li>Require security review before connecting new MCP servers, especially third-party or community-maintained servers</li>
+<li>Pin MCP server packages to specific versions — do not auto-update without review</li>
+<li>Verify package integrity using checksums or provenance attestation</li>
+<li>Implement an organizational approval workflow for MCP server additions</li>
+</ul>
+<h3 id="mcp-tool-description-security">MCP Tool Description Security<a class="headerlink" href="#mcp-tool-description-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Scan tool descriptions for adversarial content, imperative instructions, hidden directives, and prompt injection patterns before injecting them into the prompt context</li>
+<li>Hash tool descriptions at approval time and detect changes on subsequent connections (rug pull detection)</li>
+<li>Reject or flag tool descriptions containing suspicious patterns (e.g., instructions targeting other tools, encoded content, references to sensitive files)</li>
+<li>Display full tool descriptions to users during approval, not just tool names</li>
+</ul>
+<h3 id="mcp-transport-security">MCP Transport Security<a class="headerlink" href="#mcp-transport-security" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Use authenticated and encrypted transports for remote MCP servers (HTTPS with TLS)</li>
+<li>Validate server identity for remote connections</li>
+<li>Prefer local (stdio) transport for sensitive operations where possible</li>
+<li>Never expose MCP server endpoints to untrusted networks without authentication</li>
+</ul>
+<h3 id="mcp-credential-protection">MCP Credential Protection<a class="headerlink" href="#mcp-credential-protection" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Never pass credentials (API keys, tokens, connection strings) as command-line arguments to MCP servers — use environment variables or secure credential stores</li>
+<li>Scan MCP configuration files for exposed secrets</li>
+<li>Rotate credentials used by MCP servers on a regular schedule</li>
+<li>Isolate credentials between MCP servers — each server should use dedicated credentials scoped to its function</li>
+</ul>
+<h3 id="mcp-permission-scoping">MCP Permission Scoping<a class="headerlink" href="#mcp-permission-scoping" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Apply the principle of least privilege to each MCP server — scope access to the minimum required resources</li>
+<li>For filesystem MCP servers, restrict access to specific directories rather than granting broad filesystem access</li>
+<li>For database MCP servers, use read-only credentials unless write access is explicitly required</li>
+<li>Implement per-user permission mapping for MCP tool invocations</li>
+</ul>
+<h3 id="mcp-cross-server-isolation">MCP Cross-Server Isolation<a class="headerlink" href="#mcp-cross-server-isolation" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Implement policies that prevent one MCP server's tool descriptions from influencing invocations to other servers</li>
+<li>Monitor and alert on cross-server tool invocation chains</li>
+<li>Consider server-level sandboxing to prevent lateral movement</li>
+<li>Implement approval gates for tool chains that span multiple MCP servers</li>
+</ul>
+<h3 id="mcp-monitoring-and-logging">MCP Monitoring and Logging<a class="headerlink" href="#mcp-monitoring-and-logging" title="Permanent link">&para;</a></h3>
+<ul>
+<li>Log all MCP tool invocations with server identity, tool name, parameters, and caller context</li>
+<li>Monitor for tool description changes across sessions</li>
+<li>Alert on new MCP server connections, especially from unrecognized sources</li>
+<li>Track cross-server invocation patterns for anomaly detection</li>
+<li>Monitor MCP server network egress for unexpected outbound connections</li>
+</ul>
+<h2 id="287-context-and-memory-isolation">28.7 Context and Memory Isolation<a class="headerlink" href="#287-context-and-memory-isolation" title="Permanent link">&para;</a></h2>
 <ul>
 <li>Enforce strict session isolation between users</li>
 <li>Implement tenant-level data separation</li>

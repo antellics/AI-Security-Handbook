@@ -11,6 +11,10 @@ GenAI vulnerabilities largely correspond to traditional web application security
 | SSRF / API Abuse | Tool Invocation Abuse | LLM triggers unauthorized internal APIs or system actions |
 | Input Validation Failures | RAG Poisoning | Malicious content injected into knowledge bases |
 | Business Logic Abuse | Jailbreak / Model Manipulation | Model behavior manipulated to bypass intended workflows |
+| Supply Chain Attacks | MCP Server Compromise | Third-party MCP server delivers malicious tool definitions or tampered data |
+| Dependency Confusion | MCP Tool Shadowing | Malicious MCP server registers tools that shadow legitimate server tools |
+| Man-in-the-Middle | MCP Transport Interception | Unsecured MCP transport (stdio, unencrypted HTTP) allows credential or data interception |
+| Privilege Escalation | MCP Permission Abuse | Overly broad MCP server permissions exploited to access unintended resources |
 
 This mapping allows security teams to leverage existing AppSec expertise when testing AI-enabled applications.
 

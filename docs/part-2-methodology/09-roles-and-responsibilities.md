@@ -13,6 +13,10 @@ Typical responsibilities:
 * RAG retrieval filtering validation
 * Tool permission enforcement
 * Rate limiting and abuse prevention
+* MCP tool description content scanning
+* MCP server permission scope validation
+* MCP credential exposure assessment
+* MCP transport security verification
 
 These tests should be **deterministic and repeatable**, suitable for inclusion in standard penetration testing programs.
 
@@ -29,6 +33,9 @@ Typical activities include:
 * Tool chaining and lateral movement
 * Agent goal hijacking
 * Long-con prompt poisoning campaigns
+* MCP tool poisoning campaigns
+* MCP rug pull and supply chain attacks
+* MCP cross-server lateral movement scenarios
 
 These tests simulate **realistic attacker behavior** and may require extended engagement timelines.
 

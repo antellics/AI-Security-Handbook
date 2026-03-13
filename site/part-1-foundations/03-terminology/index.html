@@ -791,6 +791,105 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#model-context-protocol-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Context Protocol (MCP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Host
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Client
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Resource
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-poisoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Poisoning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rug-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rug Pull
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-shadowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Shadowing
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2360,6 +2459,105 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#model-context-protocol-mcp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Model Context Protocol (MCP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-host" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Host
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-client" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Client
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-server" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Server
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-tool" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Tool
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#mcp-resource" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MCP Resource
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-poisoning" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Poisoning
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#rug-pull" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Rug Pull
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tool-shadowing" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Tool Shadowing
+      
+    </span>
+  </a>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -2402,6 +2600,24 @@
 <p>User interfaces and downstream systems that display, store, or process model responses.</p>
 <h3 id="prompt-construction-layer">Prompt Construction Layer<a class="headerlink" href="#prompt-construction-layer" title="Permanent link">&para;</a></h3>
 <p>The application layer responsible for assembling the final prompt from system instructions, developer instructions, retrieved context, and user input.</p>
+<h3 id="model-context-protocol-mcp">Model Context Protocol (MCP)<a class="headerlink" href="#model-context-protocol-mcp" title="Permanent link">&para;</a></h3>
+<p>An open protocol that standardizes how AI applications connect to external tools, data sources, and services. MCP defines a client-server architecture where AI hosts connect to MCP servers that expose capabilities through a uniform interface.</p>
+<h3 id="mcp-host">MCP Host<a class="headerlink" href="#mcp-host" title="Permanent link">&para;</a></h3>
+<p>An AI-enabled application (IDE, chat client, AI agent platform) that initiates connections to MCP servers. The host runs one or more MCP clients and controls which servers are connected and what permissions are granted.</p>
+<h3 id="mcp-client">MCP Client<a class="headerlink" href="#mcp-client" title="Permanent link">&para;</a></h3>
+<p>A protocol client within the host application that maintains a stateful session with a single MCP server. The client negotiates capabilities, routes tool calls, and manages the lifecycle of the connection.</p>
+<h3 id="mcp-server">MCP Server<a class="headerlink" href="#mcp-server" title="Permanent link">&para;</a></h3>
+<p>A lightweight program or service that exposes tools, resources, and prompt templates to MCP clients via the standardized protocol. Servers can run locally (over stdio) or remotely (over HTTP with Server-Sent Events). Servers may be first-party, third-party, or community-maintained.</p>
+<h3 id="mcp-tool">MCP Tool<a class="headerlink" href="#mcp-tool" title="Permanent link">&para;</a></h3>
+<p>A function exposed by an MCP server that the LLM can invoke. Tools have names, descriptions, and JSON Schema parameter definitions. Tool descriptions are visible to the model and influence its behavior.</p>
+<h3 id="mcp-resource">MCP Resource<a class="headerlink" href="#mcp-resource" title="Permanent link">&para;</a></h3>
+<p>A data source exposed by an MCP server that provides context to the model. Resources are identified by URIs and can represent files, database records, API responses, or other structured data.</p>
+<h3 id="tool-poisoning">Tool Poisoning<a class="headerlink" href="#tool-poisoning" title="Permanent link">&para;</a></h3>
+<p>An attack where a malicious MCP server embeds hidden adversarial instructions within tool descriptions or metadata that manipulate model behavior when the tool listing is injected into the prompt context.</p>
+<h3 id="rug-pull">Rug Pull<a class="headerlink" href="#rug-pull" title="Permanent link">&para;</a></h3>
+<p>An attack where an MCP server changes the behavior or description of its tools after the user has approved the initial connection, exploiting the gap between what was reviewed and what is executed.</p>
+<h3 id="tool-shadowing">Tool Shadowing<a class="headerlink" href="#tool-shadowing" title="Permanent link">&para;</a></h3>
+<p>An attack where a malicious MCP server registers tools with names identical or similar to those exposed by legitimate servers, intercepting or overriding intended tool invocations.</p>
 <hr />
 
 
